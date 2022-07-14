@@ -1,10 +1,15 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import TheLogin from './components/Login';
+import TransactionsList from './components/TransactionsList';
+
 
 function App() {
   return (
     <div className="App">
+      <TheLogin />
+      <TransactionsList />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
