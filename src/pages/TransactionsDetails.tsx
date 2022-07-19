@@ -1,7 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-
-const Details =()=>{
+import Expenses from "../components/Expenses/Expenses";
+import TransactionsList from "./TransactionsList";
+const Details =(props:any)=>{
 
     const navigate = useNavigate();
 
@@ -9,8 +10,11 @@ const Details =()=>{
         navigate("/transactions/details/dispute")
     }
 
+
     return(
+        <div>
         <div onClick={transactionDetailHandler}>Details</div>
+        </div>
     );
 }
 

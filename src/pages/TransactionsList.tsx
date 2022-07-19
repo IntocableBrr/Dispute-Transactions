@@ -1,5 +1,4 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import Expenses from "../components/Expenses/Expenses";
 
 
@@ -34,26 +33,41 @@ const TransactionsList =()=>{
         },
 
         {
-            id: "e4",
+            id: "e5",
             title: "New Desk (Wooden)",
             amount: 450,
             date: new Date(2021, 5, 12),
           },
+
+          {
+            id: "e6",
+            title: "Car Insurance",
+            amount: 294.67,
+            date: new Date(2021, 2, 28),
+          },
       ];
 
-console.log("Length = ",expenses[0].title);
+    const itemLenght = expenses.length
 
-    const navigate = useNavigate();
 
-    const transactionHandler = () =>{
-        navigate("/transactions/details")
-    }
+
     return (
         <div>
-            <div onClick={transactionHandler}>Transactions List</div>
-            <Expenses items = {expenses}/>
+            <div >Transactions List</div>
+            <Expenses items = {expenses} itemLenght = {itemLenght}/>
         </div>
     );
 };
 
 export default TransactionsList;
+
+/*
+
+    const navigate = useNavigate();
+
+    const transactionHandler = () =>{
+        navigate("/transactions/details")
+        console.log("hello");
+    }
+
+*/
